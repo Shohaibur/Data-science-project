@@ -70,7 +70,7 @@ install.packages("deplyr")
 install.packages("matrixStats")
 library(matrixStats)
 
-library(deplyr)
+
 library(dplyr)
 
 Titanic%>% summarise_if(is.numeric,sd)

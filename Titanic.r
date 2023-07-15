@@ -30,16 +30,28 @@ mean_age <- mean(Titanic$age, na.rm = TRUE)
 Titanic$age[is.na(Titanic$age) | !is.finite(Titanic$age)] <- mean_age
 print(Titanic)
 
+#round figure
 Titanic$gender <-as.numeric(format(round(Titanic$gender,0)))
 Titanic$age <-as.numeric(format(round(Titanic$age,0)))
 Titanic$fare <-as.numeric(format(round(Titanic$fare,2)))
 print(Titanic)
+
 plot(Titanic$gender, col=5)
 print(Titanic)
 
 gender_counts <-table(Titanic$gender)
 barplot(gender_counts,names.arg = c("0","1"),xlab = "gender index", ylab = "gender counts")
 
+# Calculate the counts for each category in the "sibsp" attribute
+sibsp_count <- table(Titanic$sibsp)
+
+# Create a bar plot with appropriate names for the categories
+barplot(sibsp_count, 
+        names.arg = c("0", "1", "2", "3", "4", "5", "8"), 
+        xlab = "sibsp", 
+        ylab = "Count",
+        main = "Distribution of sibsp")
+plot(Titanic$sibsp, col=5)
 
 plot(Titanic$age,col=5)
 

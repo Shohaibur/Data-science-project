@@ -67,11 +67,30 @@ median(Titanic$age)
 var(Titanic$age)
 sd(Titanic$age)
 
+mean(Titanic$sibsp)
+median(Titanic$sibsp)
+var(Titanic$sibsp)
+sd(Titanic$sibsp)
+
+mean(Titanic$parch)
+median(Titanic$parch)
+var(Titanic$parch)
+sd(Titanic$parch)
+
 
 mean(Titanic$fare)
 median(Titanic$fare)
 var(Titanic$fare)
 sd(Titanic$fare)
+
+
+mean(Titanic$survived)
+median(Titanic$survived)
+var(Titanic$survived)
+sd(Titanic$survived)
+
+
+
 
 
 hist(Titanic$gender)
@@ -86,3 +105,4 @@ library(matrixStats)
 library(dplyr)
 
 Titanic%>% summarise_if(is.numeric,sd)
+
